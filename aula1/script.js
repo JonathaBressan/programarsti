@@ -17,9 +17,11 @@ $(document).ready(function(){
         if(cep.length == 8){
             $("input[name=cep]").removeClass("is-invalid");
             alert(cep);
-        } else{
+        } else if(cep.length == 0) {
+            $("input[name=cep]").removeClass("is-invalid");
+        }else{
             $("input[name=cep]").addClass("is-invalid");
         }
-        }
+        
     });
 });

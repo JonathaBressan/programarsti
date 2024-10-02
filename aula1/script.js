@@ -20,6 +20,11 @@ $(document).ready(function(){
             
             $.ajax("https://viacep.com.br/ws/" + cep + "/json")
             .done(function (data){
+                let resposta = JSON.parse(data);
+                if (resposta.erro) {
+                    alert("erro");
+                    return; //em caso de erro sai da funcao
+                }
                 alert(data);
             });
             

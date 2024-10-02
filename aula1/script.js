@@ -10,8 +10,8 @@ $(document).ready(function(){
             }
         }
     });
-
-
+    
+    
     $("form").on("submit", function(event) {
         //interrompe o evento.
         event.stopPropagation();
@@ -35,7 +35,7 @@ $(document).ready(function(){
                     $("input[name=rua]").val(resposta.logradouro);
                     $("input[name=complemento]").val(resposta.complemento);
                     $("input[name=bairro]").val(resposta.bairro);
-                    $("input[name=estado]").val(resposta.estado);
+                    $("select[name=estado]").val(resposta.uf);
                     $("input[name=localidade]").val(resposta.localidade);
                     return; //em caso de erro sai da funcao
                 }

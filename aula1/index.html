@@ -34,7 +34,12 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Cep" name="cep" pattern="[\d]{5}-[\d]{3}" >
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" placeholder="Cep" name="cep" pattern="[\d]{5}-[\d]{3}" >
+                            <div class="invalid-feedback">
+                                CEP inválido.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">

@@ -14,6 +14,12 @@ $(document).ready(function(){
     $("input[name=cep]").on("keyup", function(event){
         let cep = $("input[name=cep]").val();
         cep = cep.replace("-","");
-        alert(cep);
+        if(cep.length == 8){
+            $("input[name=cep]").removeClass("is-invalid");
+            alert(cep);
+        } else{
+            $("input[name=cep]").addClass("is-invalid");
+        }
+        }
     });
 });

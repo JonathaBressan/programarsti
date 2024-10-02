@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+
+    $("input[name=cep]").mask("00000-000");
     $("form").on("submit", function(event) {
         //interrompe o evento.
         event.stopPropagation();
@@ -7,11 +9,10 @@ $(document).ready(function(){
         // do navegador ao enviar o formulario, neste
         // caso, impede o envio do formulário.
         event.preventDefault();
-        alert("nao é pra apertar ainda");
-        
     });
 
-    $("input[name=cep]").on("change", function(event){
-        
-    })
+    $("input[name=cep]").on("keyup", function(event){
+        let cep = $("input[name=cep]").val(); //
+        alert(cep);
+    });
 });

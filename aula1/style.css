@@ -37,6 +37,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Efeito de foco futurista */
 }
 
+.form-select {
+    background-color: #e2e8f3; /* Azul escuro */
+    border: 1px solid #0073e6; /* Azul vibrante */
+    border-radius: 8px;
+    color: #f0f0f0; /* Texto claro */
+    transition: all 0.3s, box-shadow 0.2s;
+    padding: 10px;
+}
+
 .btn-primary {
     background-color: #0073e6; /* Azul vibrante */
     border: none;

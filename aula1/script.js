@@ -12,7 +12,8 @@ $(document).ready(function(){
     });
 
     $("input[name=cep]").on("keyup", function(event){
-        let cep = $("input[name=cep]").val(); //
+        let cep = $("input[name=cep]").val();
+        cep = cep.replace("-","");
         alert(cep);
     });
 });

@@ -13,6 +13,21 @@ $(document).ready(function() {
             }
         }
     });
+    document.querySelector("input[name=email]").addEventListener("blur", function() {
+        const email = this.value;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        if (!regex.test(email)) {
+            this.classList.add("is-invalid");
+        } else {
+            this.classList.remove("is-invalid");
+        }
+    });
+$("input[name=telefone]").mask("(00) 00000-0000");
+$("input[name=telefone]").on('keyup', function(){
+    let telefone = $
+}
+
 
     const urlEstados = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome';
 
@@ -59,7 +74,16 @@ $(document).ready(function() {
             .fail(function(data){
                 resposta = { "erro": "true"}
             })
-        } 
+        } else{
+            $("input[name=rua]").prop("disabled", false);
+            $("input[name=rua]").val("");
+            $("input[name=bairro]").prop("disabled", false);
+            $("input[name=bairro]").val("");
+            $("select[name=cidade]").prop("disabled", false);
+            $("select[name=cidade]").val("");
+            $("select[name=estado]").prop("disabled", false);
+            $("select[name=estado]").val("");
+        }
     });
 
     $('#estado').on('change', function() {
